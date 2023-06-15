@@ -5,10 +5,15 @@
 Console.WriteLine("Enter a three-digit number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+if (number < 0)
+{
+    number = number * -1;
+}
+
 int numb2 ()
 {
     if (number > 99 && number < 1000) 
-    {
+    {   
         int dec = number/10;
         int result = dec % 10;
         return result;
@@ -19,6 +24,7 @@ int numb2 ()
         return result;
     }
 }
+
 if (numb2() == -1)
 {
     Console.Write("You need to enter a three-digit number!");
